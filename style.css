@@ -9,6 +9,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
     background: #004A62;
 }
 
@@ -22,10 +23,12 @@ main{
     background: #FFF;
     box-shadow: -6px -9px 14px 7px rgba(0, 0, 0, 0.25) inset;
     margin: 20px 0;
+    max-width: 95%;
 }
 #result{
     display: flex;
-    width: 437px;
+    width: 100%;
+    max-width: 437px;
     padding: 16px 32px;
     flex-direction: column;
     align-items: flex-end;
@@ -34,11 +37,9 @@ main{
     box-shadow: 3px 4px 4px 0 rgba(0, 0, 0, 0.15) inset;
     color: #F97501;
     text-align: right;
-    font-family: Inter;
     font-size: 40px;
-    font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    line-height: 48px;
     border: none;
 }
 
@@ -80,7 +81,8 @@ button:active{
 
 .button{
     display: flex;
-    width: 436px;
+    width: 100%;
+    max-width: 436px;
     justify-content: flex-end;
     align-items: flex-start;
     align-content: flex-start;
@@ -97,3 +99,25 @@ button:active{
 .zero{
     margin-left: 111px;
 }
+
+@media (max-width: 500px) {
+    main{
+        padding: 24px;
+    }
+    #result {
+        font-size: 6vw;
+        padding: 10px 16px;
+    }
+    button {
+        width: 18vw; 
+        height: 18vw;
+        font-size: 10vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .button, .row {
+        gap: 3vw; /* Mantém espaçamento proporcional */
+    }
+}
+
