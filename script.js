@@ -64,7 +64,7 @@ buttons.forEach(button => {
 
         if (value === "=") {
             const calculation = calculateExpression(currentExpression);
-            result.value = calculation;
+            result.value = calculation.toFixed(4);
             currentExpression = calculation === "Erro" ? "" : calculation.toString();
             return;
         }
